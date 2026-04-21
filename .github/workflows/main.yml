@@ -1,11 +1,12 @@
 name: Python CI
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
 
     steps:
     - uses: actions/checkout@v3
@@ -17,12 +18,3 @@ jobs:
     - run: pip install -r requirements.txt
 
     - run: pytest -v
-=======
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: 3.11
-    - run: pip install pytest
-    - run: pytest -v
->>>>>>> 0d7b6fddb07853c56ccade6f450c9abb1d015de3
